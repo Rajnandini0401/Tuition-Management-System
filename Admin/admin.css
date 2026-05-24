@@ -1,0 +1,186 @@
+/* ===== TOPBAR ===== */
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fff;
+    padding:15px 20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom:20px;
+}
+
+.topbar h2{
+    margin:0;
+    font-size:20px;
+    color:#333;
+}
+
+/* ===== CARDS GRID ===== */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:20px;
+}
+
+/* ===== CARD ===== */
+.card{
+    padding:22px;
+    border-radius:12px;
+    color:white;
+    text-align:center;
+    text-decoration:none;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card h3{
+    margin:0;
+    font-size:28px;
+}
+
+.card p{
+    margin-top:6px;
+    font-size:14px;
+    opacity:0.9;
+}
+
+/* ===== COLORS ===== */
+.blue{
+    background:linear-gradient(135deg,#1E88E5,#1565C0);
+}
+
+.green{
+    background:linear-gradient(135deg,#43A047,#2E7D32);
+}
+
+.orange{
+    background:linear-gradient(135deg,#FB8C00,#EF6C00);
+}
+
+.red{
+    background:linear-gradient(135deg,#E53935,#B71C1C);
+}
+
+/* ===== HOVER ===== */
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* ===== MAIN ===== */
+.main{
+    margin-left:240px;
+    padding:25px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .main{
+        margin-left:0;
+    }
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+    width:240px;
+    height:100vh;
+    background: linear-gradient(180deg, #1E3A8A, #162c6b);
+    color:white;
+    position:fixed;
+    left:0;
+    top:0;
+
+    display:flex;
+    flex-direction:column;
+}
+
+/* TOP AREA */
+.sidebar-top{
+    flex:1;  /* 🔥 pushes profile down */
+}
+
+/* TITLE */
+.sidebar h2{
+    text-align:center;
+    padding:20px 0;
+    margin:0;
+}
+
+/* LINKS */
+.sidebar a{
+    display:block;
+    padding:12px 20px;
+    color:white;
+    text-decoration:none;
+}
+
+.sidebar a:hover{
+    background:rgba(255,255,255,0.1);
+}
+
+/* ===== PROFILE FIX BOTTOM ===== */
+.profile-box{
+    padding:15px;
+    border-top:1px solid rgba(255,255,255,0.2);
+    cursor:pointer;
+}
+
+.profile-box:hover{
+    background:rgba(255,255,255,0.1);
+}
+
+.profile-left{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.profile-icon{
+    width:40px;
+    height:40px;
+    background:#fff;
+    color:#1E3A8A;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+
+.profile-name{
+    font-size:14px;
+}
+
+.profile-role{
+    font-size:12px;
+    opacity:0.7;
+}
+
+/* DROPDOWN */
+.profile-menu{
+    display:none;
+    position:absolute;
+    bottom:70px;
+    left:20px;
+    background:white;
+    color:black;
+    width:150px;
+    border-radius:6px;
+}
+
+.profile-menu a{
+    color:black;
+    padding:10px;
+    display:block;
+}
+
+.profile-menu a:hover{
+    background:#f2f2f2;
+}
+
+/* ===== MAIN ===== */
+.main{
+    margin-left:240px;
+    padding:25px;
+}

@@ -1,0 +1,248 @@
+@page {
+    size: A4;
+    margin: 10mm;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+}
+
+/* MAIN CONTAINER */
+.container {
+    width: 190mm;
+    min-height: 277mm;
+    margin: 20px auto;
+    background: #ffffff;
+    border: 4px solid #959525;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+.header {
+    position: relative;
+    text-align: center;
+    border-bottom: 3px solid #1E3A8A;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.logo img {
+    width: 80px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.header-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: right;
+    font-size: 14px;
+}
+
+h1 {
+    margin: 0;
+    color: #1E3A8A;
+}
+
+/* TITLE BAR */
+.title {
+    background: #1E3A8A;
+    color: #ffffff;
+    text-align: center;
+    padding: 6px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* SECTION BOX */
+.section {
+    border: 2px solid #D4AF37;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    background: #1E3A8A;
+    color: #ffffff;
+    padding: 4px 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+/* INLINE FIELD */
+.inline-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.inline-field label {
+    width: 120px;
+}
+
+.inline-field input {
+    flex: 1;
+}
+
+/* INPUTS */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 60px;
+    resize: none;
+}
+
+/* ROW STRUCTURE */
+.row,
+.fee-row {
+    display: flex;
+    gap: 20px;
+}
+
+.col,
+.fee-box {
+    flex: 1;
+}
+
+/* CHECKBOX GROUP */
+.checkbox-group input {
+    width: auto;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+/* BALANCE FIELD */
+#balance {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    border-top: 2px solid #1E3A8A;
+    padding-top: 5px;
+    font-size: 13px;
+}
+
+
+/* BUTTONS */
+button {
+    padding: 8px 15px;
+    background: #1E3A8A;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #162c6b;
+}
+
+.print-btn {
+    text-align: center;
+    margin: 20px;
+}
+
+
+
+/* PRINT MODE */
+@media print {
+
+    @page {
+        size: A4;
+        margin: 5mm;   /* minimum margin */
+    }
+
+    body {
+        zoom: 80%;   /* 🔥 MAIN FIX (90 → 80) */
+    }
+
+    .container {
+        width: 100%;
+        padding: 8px;
+        margin: 0;
+        border: 2px solid #000;
+        min-height: auto;
+    }
+
+    .section {
+        padding: 6px;
+        margin-bottom: 6px;
+        page-break-inside: avoid;
+    }
+
+    .section-title {
+        font-size: 11px;
+        padding: 2px 6px;
+    }
+
+    h1 {
+        font-size: 16px;
+    }
+
+    .title {
+        font-size: 13px;
+        padding: 3px;
+    }
+
+    input, select, textarea {
+        font-size: 10px;
+        padding: 3px;
+        margin-bottom: 4px;
+    }
+
+    textarea {
+        height: 30px !important;
+    }
+
+    .row, .fee-row {
+        gap: 8px;
+        margin-bottom: 4px;
+    }
+
+    .inline-field {
+        margin-bottom: 4px;
+    }
+
+    .signature-row {
+        margin-top: 8px;
+    }
+
+    .sign-box {
+        font-size: 10px;
+    }
+
+    .stamp-footer {
+        font-size: 9px;
+        margin-top: 6px;
+    }
+
+    /* REMOVE BUTTONS */
+    .print-btn,
+    .no-print,
+    button,
+    .navbar {
+        display: none !important;
+    }
+}
